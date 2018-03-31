@@ -2,25 +2,27 @@ import React from 'react';
 
 import './Offer.css';
 
-const range = [
-  'uzyskania świadectwa bezpieczeństwa przemysłowego',
-  'uzyskania akredytacji bezpieczeństwa teleinformatycznego',
-  'opracowania i wdrożenia polityki bezpieczeństwa',
-  'opracowania i implementacji planu ochrony',
-  'szkolenia z zakresu ochrony danych osobowych i informacji niejawnych'
-]
+const range1 = [
+  'wodno-kanalizacyjne',
+  'gazowe',
+  'centralnego ogrzewania'
+];
+
+const range2 = [
+  'kanalizacyjne',
+  'wodociągowe',
+  'gazowe'
+];
 
 const Offer = () => (
   <div className="content__overlay offer">
     <h3>Oferta</h3>
     <div>
       <p>
-        Naszą specjalnością jest świadczenie usług konsultingowych i doradczych związanych z ochroną informacji niejawnych, danych osobowych oraz tajemnicy przedsiębiorstwa. Oferujemy usługi w zakresie doboru zabezpieczeń fizycznych, elektronicznych i bezpieczeństwa systemów teleinformatycznych.
+        Naszą specjalnością są instalacje wewnętrzne:
       </p>
-      <hr />
-      <p>Udzielamy wsparcia w zakresie:</p>
       <div className="offer__list">
-        {range.map((title, key) => (
+        {range1.map((title, key) => (
           <div
             key={key}
             className="offer__list-item"
@@ -29,7 +31,23 @@ const Offer = () => (
           </div>
         ))}
       </div>
-      <p>Świadczymy usługi związane z utrzymaniem i instalacją systemów bezpieczeństwa.</p>
+      <p>
+        a także sieci zewnętrzne:
+      </p>
+      <div className="offer__list">
+        {range2.map((title, key) => (
+          <div
+            key={key}
+            className="offer__list-item"
+          >
+            {title}
+          </div>
+        ))}
+      </div>
+      <hr />
+      <p>
+        Wykonujemy instalacje klimatyzacji i wentylacji oraz montaż pomp ciepła i kolektorów słonecznych. Realizujemy także roboty towarzyszące, takie jak odtworzenie tynków, zabudowa gips-karton, malowanie oraz układanie kostki brukowej.
+      </p>
     </div>
   </div>
 );

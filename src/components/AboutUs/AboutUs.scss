@@ -1,38 +1,32 @@
 .about-us {
   max-width: 100%;
 
-  &__image {
-    max-width: 100%;
-    width: 20em;
-    max-height: 100%;
+  h3 {
+    font-size: 1.5em;
+    font-weight: bold;
+    width: 100%;
     margin-bottom: 10px;
-  }
-
-  h2 {
-    text-align: center;
   }
 
   &__text {
     color: #333;
-    text-align: center;
-
-    h3 {
-      color: #333;
-      font-size: 1.3em;
-      font-weight: bold;
-      padding: 5px;
-      margin-bottom: 20px;
-    }
+    margin-bottom: 20px;
   }
 
-  &__functions {
+  hr {
+    border: 0;
+    border-top: 1px solid #E8E8E8;
+    margin-bottom: 20px;
+  }
+
+  &__realisations {
     display: flex;
     flex-wrap: wrap;
     margin-bottom: 20px;
 
     strong {
       font-weight: bold;
-      margin-bottom: 20px;
+      margin-bottom: 10px;
     }
 
     div {
@@ -51,9 +45,9 @@
     }
   }
 
-  &__certificates {
-    font-size: 1.2em;
-    color: #01629E;
+  &__references {
+    color: #404AC6;
     font-weight: bold;
+    padding-bottom: 20px;
   }
 }
