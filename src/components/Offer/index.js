@@ -15,7 +15,7 @@ const range2 = [
 ];
 
 const Offer = () => (
-  <div className="content__overlay offer">
+  <div className="offer">
     <h3>Oferta</h3>
     <div>
       <p>

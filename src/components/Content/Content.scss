@@ -2,6 +2,30 @@
   position: relative;
   min-height: 100vh;
   width: 100%;
+  color: #333;
+
+  div {
+    flex-shrink: 0;
+  }
+
+  h3 {
+    font-size: 1.5em;
+    font-weight: bold;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  hr {
+    border: 0;
+    border-top: 1px solid #E8E8E8;
+    margin-bottom: 20px;
+    width: 100%;
+  }
+
+  strong {
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
 
   &__layer {
     position: absolute;
@@ -37,21 +61,22 @@
     z-index: 1;
     max-width: 680px;
     width: 100%;
-    box-shadow: 0 2px 20px 5px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 2px 20px 5px rgba(0, 0, 0, 0.2);
     display: flex;
     flex-direction: column;
     align-items: center;
-    min-height: 80vh;
+    min-height: 82vh;
     box-sizing: border-box;
 
     @media screen and (min-width: 769px) {
-      max-height: 80vh;
-      overflow-y: auto;  
+      max-height: 82vh;
+      overflow-y: auto;
     }
   }
 
   &__overlay {
     align-items: initial;
+    box-shadow: none;
   }
 
   &__close {
@@ -74,7 +99,7 @@
       height: 60px;
       font-size: 35px;
       border-radius: 0 0 0 5px;
-      box-shadow: 0 2px 20px 5px rgba(0, 0, 0, 0.4);
+      box-shadow: 0 2px 20px 5px rgba(0, 0, 0, 0.2);
       background: white;
       font-weight: bold;
       color: #333;
@@ -83,6 +108,11 @@
 
   @media screen and (max-width: 768px) {
     height: initial;
+
+    &--with-overlay {
+      max-height: 100vh;
+      overflow-y: hidden;
+    }
 
     &__content {
       position: static;
@@ -106,6 +136,8 @@
       transform: none;
       z-index: 5;
       box-shadow: none;
+      max-height: 100vh;
+      overflow-y: auto;
     }
 
     &__close {

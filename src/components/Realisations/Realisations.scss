@@ -1,0 +1,25 @@
+.realisations {
+  display: flex;
+  flex-direction: column;
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+
+    span {
+      background: #F3F8FC;
+      border: 1px solid #E8E8E8;
+      padding: 5px;
+      border-radius: 5px;
+      margin-bottom: 10px;
+      flex-grow: 1;
+      flex-shrink: 1;
+    }
+  }
+
+  &__references {
+    color: #404AC6;
+    font-weight: bold;
+    padding-bottom: 20px;
+  }
+}

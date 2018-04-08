@@ -14,11 +14,11 @@ class Nav extends PureComponent {
     const { location } = this.props;
     const pathname = location.pathname.substring(location.pathname.lastIndexOf("/") + 1, location.pathname.length);
 
-    let linkOffer = 'oferta';
+    let linkOffer = 'realizacje';
     let linkContact = 'kontakt';
 
-    if (pathname === 'oferta') {
-      linkOffer = location.pathname.substring(0, location.pathname.lastIndexOf("/oferta") + 1);
+    if (pathname === 'realizacje') {
+      linkOffer = location.pathname.substring(0, location.pathname.lastIndexOf("/realizacje") + 1);
     }
 
     if (pathname === 'kontakt') {
@@ -28,10 +28,10 @@ class Nav extends PureComponent {
       <div className="nav">
         <Link
           to={linkOffer}
-          className={`nav-item ${pathname === 'oferta' ? 'active' : ''}`}
+          className={`nav-item ${pathname === 'realizacje' ? 'active' : ''}`}
           onClick={this.onClick}
         >
-          Oferta
+          Realizacje
           <FaAngleUp />
         </Link>
         <Link

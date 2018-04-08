@@ -4,7 +4,7 @@ import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import FaClose from 'react-icons/lib/fa/close';
 
 import AboutUs from '../AboutUs';
-import Offer from '../Offer';
+import Realisations from '../Realisations';
 import Contact from '../Contact';
 
 import logo from '../../images/logo.png';
@@ -16,11 +16,11 @@ class Content extends PureComponent {
   render() {
     const { location } = this.props;
     const pathname = location.pathname.substring(location.pathname.lastIndexOf("/") + 1, location.pathname.length);
-    const overlay = pathname === 'oferta' || pathname === 'kontakt';
+    const overlay = pathname === 'realizacje' || pathname === 'kontakt';
     let linkBack = '';
 
-    if (pathname === 'oferta') {
-      linkBack = location.pathname.substring(0, location.pathname.lastIndexOf("/oferta") + 1);
+    if (pathname === 'realizacje') {
+      linkBack = location.pathname.substring(0, location.pathname.lastIndexOf("/realizacje") + 1);
     }
 
     if (pathname === 'kontakt') {
@@ -28,7 +28,7 @@ class Content extends PureComponent {
     }
 
     return (
-      <div className="content">
+      <div className={`content ${overlay ? 'content--with-overlay' : ''}`}>
         <div className="content__layer" />
         <img
           className="content__image"
@@ -39,6 +39,7 @@ class Content extends PureComponent {
           <AboutUs />
         </div>
         <ReactCSSTransitionGroup
+          component="div"
           transitionName="element"
           transitionEnterTimeout={500}
           transitionLeaveTimeout={500}
@@ -57,7 +58,7 @@ class Content extends PureComponent {
               </div>
             </Link>
           )}
-          {pathname === 'oferta' && <Offer />}
+          {pathname === 'realizacje' && <Realisations />}
           {pathname === 'kontakt' && <Contact />}
         </ReactCSSTransitionGroup>
       </div>

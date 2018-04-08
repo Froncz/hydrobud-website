@@ -1,12 +1,6 @@
 .offer {
   color: #333;
 
-  h3 {
-    font-size: 1.5em;
-    font-weight: bold;
-    width: 100%;
-  }
-
   p {
     font-size: 1.1em;
     margin: 10px 0;
@@ -20,12 +14,6 @@
       font-size: 1em;
       text-align: center;
     }
-  }
-
-  hr {
-    border: 0;
-    border-top: 1px solid #E8E8E8;
-    margin-bottom: 20px;
   }
 
   &__list {

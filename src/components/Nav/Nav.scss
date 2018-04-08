@@ -8,7 +8,7 @@
   border-top: 1px solid #E8E8E8;
   background: white;
   display: flex;
-  z-index: 4;
+  z-index: 5;
 
   &-item {
     display: flex;
@@ -21,6 +21,7 @@
     font-size: 1.2em;
     font-weight: bold;
     text-decoration: none;
+    width: 50%;
 
     svg {
       height: 22px;
