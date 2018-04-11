@@ -2,6 +2,10 @@
   color: #333;
   align-items: flex-start;
 
+  .inner {
+    padding: 30px 30px 80px;
+  }
+
   &__form {
     background: #F7F7F7;
     border: 1px solid #E8E8E8;

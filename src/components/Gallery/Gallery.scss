@@ -1,9 +1,9 @@
 .gallery {
-  overflow-x: auto;
+  overflow-x: hidden;
   padding-bottom: 10px;
   margin-bottom: 20px;
 
-  &__list {
+  &__list > div {
     display: flex;
     flex-wrap: nowrap !important;
   }
@@ -23,6 +23,5 @@
       width: auto;
       height: auto;
     }
-
   }
 }

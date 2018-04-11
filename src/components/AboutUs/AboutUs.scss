@@ -1,8 +1,13 @@
 .about-us {
   max-width: 100%;
+  padding: 30px 30px 80px;
 
   &__text {
     color: #333;
     margin-bottom: 20px;
+  }
+
+  @media screen and (max-width: 768px) {
+    padding: 30px 30px 180px;
   }
 }

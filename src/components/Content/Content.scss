@@ -24,7 +24,22 @@
 
   strong {
     font-weight: bold;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
+    display: block;
+  }
+
+  .thumb {
+    background: #E8E8E8;
+    border-radius: 7px;
+    width: 4px;
+    margin-left: 2px;
+  }
+
+  .thumb-small {
+    background: #424dc8;
+    border-radius: 7px;
+    height: 2px;
+    margin-left: 2px;
   }
 
   &__layer {
@@ -51,12 +66,10 @@
   }
 
   &__content, &__overlay {
-    position: absolute;
     background: white;
-    padding: 30px 30px 60px;
     border-radius: 5px;
-    left: 50%;
-    bottom: 0;
+    left: 50% !important;
+    bottom: 0 !important;
     transform: translateX(-50%);
     z-index: 1;
     max-width: 680px;
@@ -70,7 +83,7 @@
 
     @media screen and (min-width: 769px) {
       max-height: 82vh;
-      overflow-y: auto;
+      overflow-y: hidden;
     }
   }
 
@@ -115,7 +128,8 @@
     }
 
     &__content {
-      position: static;
+      position: relative !important;
+      left: 0 !important;
       max-width: 100%;
       width: initial;
       bottom: initial;
@@ -124,20 +138,25 @@
       margin-top: 35vh;
       margin-bottom: 20px;
       overflow: hidden;
+      width: calc(100% - 10px) !important;
     }
 
     &__overlay {
-      top: -50px;
+      top: -50px !important;
       padding-top: 120px;
       max-width: 100%;
       border-radius: 0;
-      left: 0;
-      right: 0;
+      left: 0 !important;
+      right: 0 !important;
       transform: none;
       z-index: 5;
       box-shadow: none;
       max-height: 100vh;
-      overflow-y: auto;
+      overflow-y: hidden;
+
+      .inner {
+        padding-top: 120px;
+      }
     }
 
     &__close {

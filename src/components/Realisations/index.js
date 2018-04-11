@@ -1,4 +1,5 @@
 import React from 'react';
+import { Scrollbars } from 'react-custom-scrollbars';
 
 import "./Realisations.css";
 
@@ -19,20 +20,27 @@ const realisations = [
 ];
 
 const Realisations = () => (
-  <div className="content__overlay realisations">
-    <h3>Realizacje</h3>
-    <strong>Przykłady niektórych z naszych realizacji:</strong>
-    <div className="realisations__list">
-      {realisations.map((realisation, key) => (
-        <span key={key}>{realisation}</span>
-      ))}
+  <Scrollbars
+    renderThumbHorizontal={() => <div className="thumb thumb--horizontal"/>}
+    renderThumbVertical={() => <div className="thumb thumb--vertical"/>}
+    className="content__overlay realisations"
+    style={{ position: 'absolute' }}
+  >
+    <div className="inner">
+      <h3>Realizacje</h3>
+      <strong>Przykłady niektórych z naszych realizacji:</strong>
+      <div className="realisations__list">
+        {realisations.map((realisation, key) => (
+          <span key={key}>{realisation}</span>
+        ))}
+      </div>
+      <hr />
+      <h3>Referencje</h3>
+      <div className="realisations__references">
+          Referencje przedstawiamy na życzenie.
+      </div>
     </div>
-    <hr />
-    <h3>Referencje</h3>
-    <div className="realisations__references">
-        Referencje przedstawiamy na życzenie.
-    </div>
-  </div>
+  </Scrollbars>
 );
 
 export default Realisations;

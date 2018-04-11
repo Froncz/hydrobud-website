@@ -1,6 +1,8 @@
 import React, { PureComponent } from 'react';
 import { withRouter, Link } from 'react-router-dom';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
+import { Scrollbars } from 'react-custom-scrollbars';
+
 import FaClose from 'react-icons/lib/fa/close';
 
 import AboutUs from '../AboutUs';
@@ -35,9 +37,14 @@ class Content extends PureComponent {
           src={background}
           alt="Ochrona danych"
         />
-        <div className="content__content">
+        <Scrollbars
+          className="content__content"
+          style={{ position: 'absolute' }}
+          renderThumbHorizontal={() => <div className="thumb thumb--horizontal"/>}
+          renderThumbVertical={() => <div className="thumb thumb--vertical"/>}
+        >
           <AboutUs />
-        </div>
+        </Scrollbars>
         <ReactCSSTransitionGroup
           component="div"
           transitionName="element"

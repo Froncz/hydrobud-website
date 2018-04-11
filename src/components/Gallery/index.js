@@ -1,5 +1,6 @@
 import React, { PureComponent } from 'react';
 import ImageZoom from 'react-medium-image-zoom'
+import { Scrollbars } from 'react-custom-scrollbars';
 
 import './Gallery.css';
 
@@ -34,7 +35,12 @@ class Gallery extends PureComponent {
   render() {
     return (
       <div className="gallery">
-        <div className="gallery__list">
+        <Scrollbars
+          className="gallery__list"
+          style={{ height: '140px' }}
+          renderThumbHorizontal={() => <div className="thumb-small thumb-small--horizontal"/>}
+          renderThumbVertical={() => <div className="thumb-small thumb-small--vertical"/>}
+        >
           {images.map((image, key) => (
             <div className="gallery__item" key={key}>
               <ImageZoom
@@ -47,7 +53,7 @@ class Gallery extends PureComponent {
               />
             </div>
           ))}
-        </div>
+        </Scrollbars>
       </div>
     );
   }
