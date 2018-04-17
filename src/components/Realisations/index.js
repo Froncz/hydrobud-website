@@ -24,7 +24,7 @@ const Realisations = () => (
     renderThumbHorizontal={() => <div className="thumb thumb--horizontal"/>}
     renderThumbVertical={() => <div className="thumb thumb--vertical"/>}
     className="content__overlay realisations"
-    style={{ position: 'absolute' }}
+    style={{ position: window.innerWidth <= 768 ? 'fixed' : 'absolute' }}
   >
     <div className="inner">
       <h3>Realizacje</h3>

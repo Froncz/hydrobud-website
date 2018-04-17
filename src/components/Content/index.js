@@ -37,14 +37,20 @@ class Content extends PureComponent {
           src={background}
           alt="Ochrona danych"
         />
-        <Scrollbars
-          className="content__content"
-          style={{ position: 'absolute' }}
-          renderThumbHorizontal={() => <div className="thumb thumb--horizontal"/>}
-          renderThumbVertical={() => <div className="thumb thumb--vertical"/>}
-        >
-          <AboutUs />
-        </Scrollbars>
+        {window.innerWidth > 768 ? (
+          <Scrollbars
+            className="content__content"
+            style={{ position: 'absolute' }}
+            renderThumbHorizontal={() => <div className="thumb thumb--horizontal"/>}
+            renderThumbVertical={() => <div className="thumb thumb--vertical"/>}
+          >
+            <AboutUs />
+          </Scrollbars>
+        ) : (
+          <div className="content__content">
+            <AboutUs />
+          </div>
+        )}
         <ReactCSSTransitionGroup
           component="div"
           transitionName="element"
