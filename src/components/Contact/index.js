@@ -6,7 +6,7 @@ import { Scrollbars } from 'react-custom-scrollbars';
 
 import './Contact.css';
 
-const Contact = () => (
+const Contact = ({ content: { kontakt }}) => (
   <Scrollbars
     renderThumbHorizontal={() => <div className="thumb thumb--horizontal"/>}
     renderThumbVertical={() => <div className="thumb thumb--vertical"/>}
@@ -14,20 +14,20 @@ const Contact = () => (
     style={{ position: window.innerWidth <= 768 ? 'fixed' : 'absolute' }}
   >
     <div className="inner">
-      <h3>Kontakt</h3>
+      <h3>{kontakt.tytul}</h3>
       <div className="contact__form">
         <div className="contact__company-info">
           <div className="contact__info">
-            <strong>Biuro:</strong>
+            <strong>{kontakt.biuro}</strong>
             <p className="contact__company">
-              Hydrobud
+              {kontakt.biuro_nazwa}
             </p>
             <div>
               <a href="https://goo.gl/maps/ZkrYiAbE5eK2">
                 <FaMap />
                 <div>
-                  <span>ul. Karowa 16</span>
-                  <span>08-119 Siedlce</span>
+                  <span>{kontakt.biuro_adres1}</span>
+                  <span>{kontakt.biuro_adres2}</span>
                 </div>
               </a>
               <div>
@@ -35,37 +35,37 @@ const Contact = () => (
                   <div>
                     <FaPhoneSquare />
                     <div>
-                      <a href="tel:+48256322990">
-                        tel./fax: (25) 6322990
+                      <a href={`tel:+48${kontakt.biuro_numer_fax}`}>
+                        tel./fax: {kontakt.biuro_numer_fax}
                       </a>
-                      <a href="tel:+48600345625">
-                        tel: 600345625
+                      <a href={`tel:+48${kontakt.biuro_numer2}`}>
+                        tel: {kontakt.biuro_numer2}
                       </a>
-                      <a href="tel:+48604105315">
-                        tel: 604105315
+                      <a href={`tel:+48${kontakt.biuro_numer3}`}>
+                        tel: {kontakt.biuro_numer3}
                       </a>
                     </div>
                   </div>
-                  <a href="mailto:biuro@hydrobud.waw.pl">
+                  <a href={`mailto:${kontakt.biuro_email}`}>
                     <FaEnvelopeSquare />
-                    biuro@hydrobud.waw.pl
+                    {kontakt.biuro_email}
                   </a>
                 </div>
               </div>
             </div>
           </div>
           <div className="contact__info">
-            <strong>Siedziba:</strong>
+            <strong>{kontakt.siedziba}</strong>
             <p className="contact__company">
-              Hydrobud
+              {kontakt.siedziba_nazwa}
             </p>
 
             <div>
               <a href="https://goo.gl/maps/HaGJdPH9xh82">
                 <FaMap />
                 <div>
-                  <span>ul. Rejtana 22</span>
-                  <span>08-110 Siedlce</span>
+                  <span>{kontakt.siedziba_adres1}</span>
+                  <span>{kontakt.siedziba_adres2}</span>
                 </div>
               </a>
             </div>

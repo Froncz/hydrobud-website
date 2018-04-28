@@ -29,6 +29,8 @@ class Content extends PureComponent {
       linkBack = location.pathname.substring(0, location.pathname.lastIndexOf("/kontakt") + 1);
     }
 
+    const content = window.content;
+
     return (
       <div className={`content ${overlay ? 'content--with-overlay' : ''}`}>
         <div className="content__layer" />
@@ -44,11 +46,11 @@ class Content extends PureComponent {
             renderThumbHorizontal={() => <div className="thumb thumb--horizontal"/>}
             renderThumbVertical={() => <div className="thumb thumb--vertical"/>}
           >
-            <AboutUs />
+            <AboutUs content={content} />
           </Scrollbars>
         ) : (
           <div className="content__content">
-            <AboutUs />
+            <AboutUs content={content} />
           </div>
         )}
         <ReactCSSTransitionGroup
@@ -71,8 +73,8 @@ class Content extends PureComponent {
               </div>
             </Link>
           )}
-          {pathname === 'realizacje' && <Realisations />}
-          {pathname === 'kontakt' && <Contact />}
+          {pathname === 'realizacje' && <Realisations content={content} />}
+          {pathname === 'kontakt' && <Contact content={content} />}
         </ReactCSSTransitionGroup>
       </div>
     );

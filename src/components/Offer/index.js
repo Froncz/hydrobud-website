@@ -2,27 +2,15 @@ import React from 'react';
 
 import './Offer.css';
 
-const range1 = [
-  'wodno-kanalizacyjne',
-  'gazowe',
-  'centralnego ogrzewania'
-];
-
-const range2 = [
-  'kanalizacyjne',
-  'wodociągowe',
-  'gazowe'
-];
-
-const Offer = () => (
+const Offer = ({ o_nas }) => (
   <div className="offer">
-    <h3>Oferta</h3>
+    <h3>{o_nas.oferta_tytul}</h3>
     <div>
       <p>
-        Naszą specjalnością są instalacje wewnętrzne:
+        {o_nas.zakres1_tytul}
       </p>
       <div className="offer__list">
-        {range1.map((title, key) => (
+        {o_nas.zakres1_lista && o_nas.zakres1_lista.map((title, key) => (
           <div
             key={key}
             className="offer__list-item"
@@ -32,10 +20,10 @@ const Offer = () => (
         ))}
       </div>
       <p>
-        a także sieci zewnętrzne:
+        {o_nas.zakres2_tytul}
       </p>
       <div className="offer__list">
-        {range2.map((title, key) => (
+        {o_nas.zakres2_lista && o_nas.zakres2_lista.map((title, key) => (
           <div
             key={key}
             className="offer__list-item"
@@ -46,7 +34,7 @@ const Offer = () => (
       </div>
       <hr />
       <p>
-        Wykonujemy instalacje klimatyzacji i wentylacji oraz montaż pomp ciepła i kolektorów słonecznych. Realizujemy także roboty towarzyszące, takie jak odtworzenie tynków, zabudowa gips-karton, malowanie oraz układanie kostki brukowej.
+        {o_nas.oferta_dodatkowe}
       </p>
     </div>
   </div>
