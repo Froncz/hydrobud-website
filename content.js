@@ -1,6 +1,6 @@
 window.content = {
   "o_nas": {
-    "tytul": "Firma",
+    "tytul": "Firma test",
     "o_firmie": "Firma Hydrobud powstała w 1992 roku pod nazwą Zakład Instalacji Sanitarnych C.O. i Gaz. W 2002 roku nastąpiła zmiana nazwy na obecną. W ciągu 25 lat działalności zrealizowaliśmy szereg inwestycji dla klientów instytucjonalnych i indywidualnych na terenie całego kraju. Specjalizujemy się w wykonawstwie instalacji hydraulicznych, wodno-kanalizacyjnych, centralnego ogrzewania, wentylacji i klimatyzacji. Posiadamy kompetentną kadrę oraz niezbędny sprzęt do wykonywania powierzonych prac. Priorytetem firmy jest maksymalizacja satysfakcji klientów.",
     "oferta_tytul": "Oferta",
     "zakres1_tytul": "Naszą specjalnością są instalacje wewnętrzne:",
@@ -51,8 +51,6 @@ window.content = {
     "biuro_numer2": "600345625",
     "biuro_numer3": "604105315",
     "biuro_email": "biuro@hydrobud.waw.pl",
-    "numer": "604105315",
-
     "siedziba": "Sziedziba:",
     "siedziba_nazwa": "Hydrobud",
     "siedziba_adres1": "ul. Rejtana 22",
