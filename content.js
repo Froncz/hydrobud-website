@@ -17,9 +17,6 @@ window.content = {
     ],
     "oferta_dodatkowe": "Wykonujemy instalacje klimatyzacji i wentylacji oraz montaż pomp ciepła i kolektorów słonecznych. Realizujemy także roboty towarzyszące, takie jak odtworzenie tynków, zabudowa gips-karton, malowanie oraz układanie kostki brukowej."
   },
-
-
-
   "realizacje": {
     "tytul": "Realizacje",
     "podtytul": "Przykłady niektórych z naszych realizacji:",
@@ -36,7 +33,7 @@ window.content = {
       "Wykonanie zewnętrznych sieci: wodociągowej, kanalizacji deszczowej i sanitarnej dla budynków przy ul. Okunin 134 w Nowym Dworze Mazowieckim.",
       "Remont instalacji sanitarnych i grzewczych na budowie WB Electronics w Ożarowie Mazowieckim.",
       "Przeprowadzenie kompletnego remontu instalacji sanitarnych i grzewczych w ocynkowni w Dębicy.",
-      "Wykonanie kompletu instalacji sanitarnych i grzewczych na budowie Fabryki Wanien Akrylowych i Kabin Prysznicowych CERSANIT II i na budowie Fabryki Mebli Łazienkowych Cersanit II w Starachowicach.",
+      "Wykonanie kompletu instalacji sanitarnych i grzewczych na budowie Fabryki Wanien Akrylowych i Kabin Prysznicowych CERSANIT II i na budowie Fabryki Mebli Łazienkowych Cersanit II w Starachowicach."
     ],
     "referencje_tytul": "Referencje",
     "referencje_info": "Referencje przedstawiamy na życzenie."
