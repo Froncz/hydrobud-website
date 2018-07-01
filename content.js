@@ -5,15 +5,15 @@ window.content = {
     "oferta_tytul": "Oferta",
     "zakres1_tytul": "Naszą specjalnością są instalacje wewnętrzne:",
     "zakres1_lista": [
-      'wodno-kanalizacyjne',
-      'gazowe',
-      'centralnego ogrzewania'
+      "wodno-kanalizacyjne",
+      "gazowe",
+      "centralnego ogrzewania"
     ],
     "zakres2_tytul": "a także sieci zewnętrzne:",
     "zakres2_lista": [
-      'kanalizacyjne',
-      'wodociągowe',
-      'gazowe'
+      "kanalizacyjne",
+      "wodociągowe",
+      "gazowe"
     ],
     "oferta_dodatkowe": "Wykonujemy instalacje klimatyzacji i wentylacji oraz montaż pomp ciepła i kolektorów słonecznych. Realizujemy także roboty towarzyszące, takie jak odtworzenie tynków, zabudowa gips-karton, malowanie oraz układanie kostki brukowej."
   },
